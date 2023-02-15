@@ -35,3 +35,22 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 Assignment 2
 completed my assignment2 on 10 feb.
+
+
+Assignment 3
+
+Use your completed assignment 2 as a base line.
+Change the version in your package.json to 0.0.3.
+
+Add more content to your array such that you have at least 7 content items. Update your
+content items to use one of at least 2 different type values, as well as some with no type set.
+
+
+Create a pipe (name it some relevant to its functionality), that accepts a single optional string
+parameter, to filter an array of Content, only returning Content that has its type equal to a
+string passed to the pipe. If no value is passed in, then the pipe returns a filtered array of
+Content that has no type set.
+Alter the html that displays your on your Content-List component so that it displays
+separate lists by type using your pipe (You should have one loop where the type is not passed
+into the pipe, and at 2 separate *ngFor loops with the type set, depending how many
+different types you decided to use).

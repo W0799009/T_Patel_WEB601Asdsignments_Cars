@@ -8,11 +8,13 @@
   </ul>
 </div>-->
 
-
+<div *ngFor="let content of contentArray | contentType:'SUV'">
+  {{ content.title }} is {{ content.type }}
+</div>
 <div *ngFor="let content of contentArray; let i = index"
      class="content-card" style="width: 40%; padding: 10px; margin: 10px; text-align:center"
      [ngStyle]="{ border: i == 0 ? '2px solid black' : '1px solid gray' }">
-  <header class="content-card-header" >
+  <header class="content-card-header">
     {{ content.title }}
   </header>
 
@@ -35,7 +37,93 @@
   </div>
 </div>
 
-<!--
+
+
+<h2>Content List</h2>
+
+<h3>No Type</h3>
+<ul>
+  <li style="list-style-type: none;" *ngFor="let content of contentArray | contentType">
+
+    <div class="content-card" style="width: 40%; padding: 10px; margin: 10px; text-align: center; border: 3px solid green">
+      <h1 class="content-card-header">
+        {{content.title}}
+      </h1>
+      <div class="content-card-body">
+        <p><img src="{{ content.imgURL }}" alt="content image" style="width: 70%" /></p>
+        <!--<p>{{ content.imgURL }}</p>-->
+        <p style="font-size:10px">{{ content.description }}</p>
+        <p><strong>Creator:</strong> {{ content.creator }}</p>
+        <p><strong>Type:</strong> {{ content.type }}</p>
+        <p>
+          <strong>Tags:</strong>
+          <span *ngFor="let tag of content.tags">{{ content.tags }}</span>
+        </p>
+      </div>
+    </div>
+  </li>
+</ul>
+
+<h3>SUV's</h3>
+<ul>
+  <li style="list-style-type: none;" *ngFor="let content of contentArray | contentType: 'SUV'">
+
+    <div class="content-card" style="width: 40%; padding: 10px; margin: 10px; text-align: center; border: 3px solid green">
+      <h1 class="content-card-header">
+        {{content.title}}
+      </h1>
+      <div class="content-card-body">
+        <p><img src="{{ content.imgURL }}" alt="content image" style="width: 70%" /></p>
+        <!--<p>{{ content.imgURL }}</p>-->
+        <p style="font-size:10px">{{ content.description }}</p>
+        <p><strong>Creator:</strong> {{ content.creator }}</p>
+        <p><strong>Type:</strong> {{ content.type }}</p>
+        <p>
+          <strong>Tags:</strong>
+          <span *ngFor="let tag of content.tags">{{ content.tags }}</span>
+        </p>
+      </div>
+    </div>
+  </li>
+</ul>
+
+<h3>Supercars</h3>
+<ul>
+  <li style="list-style-type: none;" *ngFor="let content of contentArray | contentType:'Supercar'">
+
+    <div class="content-card" style="width: 40%; padding: 10px; margin: 10px; text-align:center; border:3px solid green">
+      <h1 class="content-card-header">
+        {{content.title}}
+      </h1>
+      <div class="content-card-body">
+        <p><img src="{{ content.imgURL }}" alt="content image" style="width: 70%" /></p>
+        <!--<p>{{ content.imgURL }}</p>-->
+        <p style="font-size:10px">{{ content.description }}</p>
+        <p><strong>Creator:</strong> {{ content.creator }}</p>
+        <p><strong>Type:</strong> {{ content.type }}</p>
+        <p>
+          <strong>Tags:</strong>
+          <span *ngFor="let tag of content.tags">{{ content.tags }}</span>
+        </p>
+      </div>
+    </div>
+  </li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- code done in assignment 2
 <div *ngFor="let content of Content; let i = index" class="content-card" [ngStyle]="{'border': i == 0 ? '2px solid black' : '1px solid gray'}">
   <header class="content-card-header">
     {{ content.title }}
