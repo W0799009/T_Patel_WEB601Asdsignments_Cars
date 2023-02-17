@@ -1,7 +1,6 @@
 //import { Component } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 import { Content } from '../helper-files/content-interface';
-import { ContentList } from '../helper-files/content-list';
 
 
 @Component({
@@ -9,15 +8,14 @@ import { ContentList } from '../helper-files/content-list';
   templateUrl: './content-list.component.html',
   styleUrls: ['./content-list.component.scss']
 })
-export class ContentListComponent {
-
-  contentArray: Content[];
-
-  constructor() {
-    this.contentArray = [
+export class ContentListComponent implements OnInit {
+  ngOnInit(): void {
+      throw new Error('Method not implemented.');
+  }
+  contentArray = [
       {
         id: 1,
-        title: 'Car 1',
+        title: 'Car',
         description: 'This is Car1',
         creator: 'Creator1',
         imgURL: 'https://www.hdnicewallpapers.com/Walls/Big/Lamborghini/4K_Photo_of_2019_Lamborghini_Huracan_EVO_Car.jpg',
@@ -77,8 +75,15 @@ export class ContentListComponent {
         tags: ['Tag 1.1', 'Tag 1.2'],
       }
     ];
+
+  searchTerm!: string;
+
+  searchArray() {
+    const result = this.contentArray.find((element: { title: any; }) => element.title === this.searchTerm);
+    if (result) {
+      console.log('Success! Element found:', result);
+    } else {
+      console.log('Error! Element not found in array.');
+    }
   }
 }
-
-
-

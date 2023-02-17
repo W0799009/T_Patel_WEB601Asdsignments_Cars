@@ -1,33 +1,33 @@
-<p>content-list works!</p>
+<!--
+  ASSIGNMENT_2
 
-<p>Cars List</p>
+  <p>content-list works!</p>
 
+<p>Cars List</p>-->
 <!--<div>
   <ul>
     <li *ngFor="let item of contentArray">{{item.title}} <br /> {{item.imgURL}}</li>
   </ul>
 </div>-->
-
-<div *ngFor="let content of contentArray | contentType:'SUV'">
+<!--<div *ngFor="let content of contentArray | contentType:'SUV'">
   {{ content.title }} is {{ content.type }}
 </div>
+
 <div *ngFor="let content of contentArray; let i = index"
      class="content-card" style="width: 40%; padding: 10px; margin: 10px; text-align:center"
      [ngStyle]="{ border: i == 0 ? '2px solid black' : '1px solid gray' }">
   <header class="content-card-header">
     {{ content.title }}
-  </header>
-
-  <!--
-    <div (click)="console.log(content.id + ' - ' + content.title)">
-    <img [src]="content.imageURL" alt="content image" />
-  </div>
-  -->
-
-  <div class="content-card-body">
-    <p><img src="{{ content.imgURL }}" alt="content image" style="width: 70%" /></p>
-    <!--<p>{{ content.imgURL }}</p>-->
-    <p style="font-size:10px">{{ content.description }}</p>
+  </header>-->
+<!--
+  <div (click)="console.log(content.id + ' - ' + content.title)">
+  <img [src]="content.imageURL" alt="content image" />
+</div>
+-->
+<!--<div class="content-card-body">
+  <p><img src="{{ content.imgURL }}" alt="content image" style="width: 70%" /></p>-->
+<!--<p>{{ content.imgURL }}</p>-->
+<!--<p style="font-size:10px">{{ content.description }}</p>
     <p><strong>Creator:</strong> {{ content.creator }}</p>
     <p><strong>Type:</strong> {{ content.type }}</p>
     <p>
@@ -35,7 +35,7 @@
       <span *ngFor="let tag of content.tags">{{ content.tags }}</span>
     </p>
   </div>
-</div>
+</div>-->
 
 
 
@@ -43,21 +43,20 @@
 
 <h3>No Type</h3>
 <ul>
-  <li style="list-style-type: none;" *ngFor="let content of contentArray | contentType">
+  <li style="list-style-type: none; font-family:'Gill Sans', 'Gill Sans MT' , Calibri, 'Trebuchet MS' , sans-serif" *ngFor="let content of contentArray | contentType">
 
-    <div class="content-card" style="width: 40%; padding: 10px; margin: 10px; text-align: center; border: 3px solid green">
+    <div class="content-card" style="width: 40%; padding: 10px; margin: 10px; text-align: center; background-color:darkcyan; color:lightcyan">
       <h1 class="content-card-header">
         {{content.title}}
       </h1>
       <div class="content-card-body">
         <p><img src="{{ content.imgURL }}" alt="content image" style="width: 70%" /></p>
-        <!--<p>{{ content.imgURL }}</p>-->
         <p style="font-size:10px">{{ content.description }}</p>
         <p><strong>Creator:</strong> {{ content.creator }}</p>
         <p><strong>Type:</strong> {{ content.type }}</p>
         <p>
           <strong>Tags:</strong>
-          <span *ngFor="let tag of content.tags">{{ content.tags }}</span>
+          <span>{{ content.tags }}</span>
         </p>
       </div>
     </div>
@@ -66,21 +65,20 @@
 
 <h3>SUV's</h3>
 <ul>
-  <li style="list-style-type: none;" *ngFor="let content of contentArray | contentType: 'SUV'">
+  <li style="list-style-type: none; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" *ngFor="let content of contentArray | contentType: 'SUV'">
 
-    <div class="content-card" style="width: 40%; padding: 10px; margin: 10px; text-align: center; border: 3px solid green">
+    <div class="content-card" style="width: 40%; padding: 10px; margin: 10px; text-align: center; background-color:darkmagenta; color:antiquewhite">
       <h1 class="content-card-header">
         {{content.title}}
       </h1>
       <div class="content-card-body">
         <p><img src="{{ content.imgURL }}" alt="content image" style="width: 70%" /></p>
-        <!--<p>{{ content.imgURL }}</p>-->
         <p style="font-size:10px">{{ content.description }}</p>
         <p><strong>Creator:</strong> {{ content.creator }}</p>
         <p><strong>Type:</strong> {{ content.type }}</p>
         <p>
           <strong>Tags:</strong>
-          <span *ngFor="let tag of content.tags">{{ content.tags }}</span>
+          <span>{{ content.tags }}</span>
         </p>
       </div>
     </div>
@@ -91,19 +89,18 @@
 <ul>
   <li style="list-style-type: none;" *ngFor="let content of contentArray | contentType:'Supercar'">
 
-    <div class="content-card" style="width: 40%; padding: 10px; margin: 10px; text-align:center; border:3px solid green">
+    <div class="content-card" style="width: 40%; padding: 10px; margin: 10px; text-align: center; background-color:darkblue; color:lightblue">
       <h1 class="content-card-header">
         {{content.title}}
       </h1>
       <div class="content-card-body">
         <p><img src="{{ content.imgURL }}" alt="content image" style="width: 70%" /></p>
-        <!--<p>{{ content.imgURL }}</p>-->
         <p style="font-size:10px">{{ content.description }}</p>
         <p><strong>Creator:</strong> {{ content.creator }}</p>
         <p><strong>Type:</strong> {{ content.type }}</p>
         <p>
           <strong>Tags:</strong>
-          <span *ngFor="let tag of content.tags">{{ content.tags }}</span>
+          <span>{{ content.tags }}</span>
         </p>
       </div>
     </div>
@@ -112,33 +109,10 @@
 
 
 
+<form>
+  <input type="text" [(ngModel)]="searchTerm" placeholder="Enter search term">
+  <button (click)="searchArray()">Search</button>
+</form>
 
 
 
-
-
-
-
-
-
-
-
-<!-- code done in assignment 2
-<div *ngFor="let content of Content; let i = index" class="content-card" [ngStyle]="{'border': i == 0 ? '2px solid black' : '1px solid gray'}">
-  <header class="content-card-header">
-    {{ content.title }}
-  </header>
-  <div (click)="console.log(content.id + ' - ' + content.title)">
-    <img [src]="content.image" alt="content image">
-  </div>
-  <div class="content-card-body">
-    <p>{{ content.description }}</p>
-    <p><strong>Creator:</strong> {{ content.creator }}</p>
-    <p><strong>Type:</strong> {{ content.type }}</p>
-    <p>
-      <strong>Tags:</strong>
-      <span *ngFor="let tag of content.tags">{{ tag }}</span>
-    </p>
-  </div>
-</div>
--->

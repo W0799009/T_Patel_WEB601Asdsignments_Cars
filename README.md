@@ -54,3 +54,8 @@ Alter the html that displays your on your Content-List component so that it disp
 separate lists by type using your pipe (You should have one loop where the type is not passed
 into the pipe, and at 2 separate *ngFor loops with the type set, depending how many
 different types you decided to use).
+
+
+
+
+Not getting the text bellow the input box.
