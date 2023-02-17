@@ -55,7 +55,16 @@ separate lists by type using your pipe (You should have one loop where the type 
 into the pipe, and at 2 separate *ngFor loops with the type set, depending how many
 different types you decided to use).
 
+Style the lists Content-Card's differently by using different font or background colours for
+the card tag itself, based on their type (i.e. one type's content cards could have a green text in
+the card, another type's content cards could have a red text in the card, etc). There should be
+a clear difference between the colour styling from one card with a certain type versus one with
+another type.
+On your Content-List component, add an input field at the very top of the page that users
+may enter the title of a Content item. Next to the input field, add a button that, when clicked,
+it will display a message about whether a Content item exists with that title or not. The
+message should be displayed under this search, with red text when the title doesn't exist, and
+green text when it does exist.
 
-
-
-Not getting the text bellow the input box.
+All done
+Assignment-5 completed

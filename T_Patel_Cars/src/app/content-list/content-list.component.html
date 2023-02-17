@@ -41,6 +41,32 @@
 
 <h2>Content List</h2>
 
+
+<h1 style="padding: 20px; margin: 20px; background-color: lavenderblush; color: darkblue;">
+  Search Form
+
+
+  <br />
+  <br />
+
+
+
+
+  <div>
+    <input type="text" [(ngModel)]="searchTerm" placeholder="Search by title">
+    &nbsp;
+    <button (click)="checkExistence()"> Search </button>
+    <!--<p *ngIf="searchTerm && searchResults.length === 0" class="search-message red">No results found.</p>-->
+    <p *ngIf="(searchResults.length === 0 || searchResults.length < 0)" class="search-message red" style="color: red; font-weight: bold; font-size: 30px;">No results found.</p>
+    <p *ngIf="searchTerm && searchResults.length > 0" class="search-message green" style="color: green; font-weight: bold; font-size: 30px;">A content item with this title exists.</p>
+  </div>
+
+  <ul>
+    <li *ngFor="let item of searchResults">{{ item.title }}</li>
+  </ul>
+</h1>
+
+
 <h3>No Type</h3>
 <ul>
   <li style="list-style-type: none; font-family:'Gill Sans', 'Gill Sans MT' , Calibri, 'Trebuchet MS' , sans-serif" *ngFor="let content of contentArray | contentType">
@@ -107,12 +133,6 @@
   </li>
 </ul>
 
-
-
-<form>
-  <input type="text" [(ngModel)]="searchTerm" placeholder="Enter search term">
-  <button (click)="searchArray()">Search</button>
-</form>
 
 
 

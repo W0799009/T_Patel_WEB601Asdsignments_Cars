@@ -76,14 +76,19 @@ export class ContentListComponent implements OnInit {
       }
     ];
 
-  searchTerm!: string;
+  searchTerm = '';
+  searchResults: Content[] = [];
+  searchExists = false;
 
-  searchArray() {
-    const result = this.contentArray.find((element: { title: any; }) => element.title === this.searchTerm);
-    if (result) {
-      console.log('Success! Element found:', result);
-    } else {
-      console.log('Error! Element not found in array.');
+  checkExistence() {
+    /*
+    if (this.searchTerm.trim() === '')
+    {
+      this.searchExists = false;
+      return;
     }
+    */
+    this.searchResults = this.contentArray.filter(item => item.title.toLowerCase().includes(this.searchTerm.toLowerCase()));
+    this.searchExists = this.searchResults.length > 0;
   }
 }
