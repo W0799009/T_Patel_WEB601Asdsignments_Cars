@@ -90,5 +90,5 @@ export class ContentListComponent implements OnInit {
     */
     this.searchResults = this.contentArray.filter(item => item.title.toLowerCase().includes(this.searchTerm.toLowerCase()));
     this.searchExists = this.searchResults.length > 0;
-  }
+  }    
 }
