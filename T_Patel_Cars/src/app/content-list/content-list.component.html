@@ -64,7 +64,7 @@
 </h1>
 
 
-<h3 style="font-size: 40px; text-align: center; background-color: antiquewhite; color: darkblue; padding: 10px; border-radius:5px" appHoverAffect>---No Type---</h3>
+<h3 style="font-size: 40px; text-align: center; background-color: antiquewhite; color: darkblue; padding: 10px; border-radius:5px" appHoverAffect="underline">---No Type---</h3>
 
 <ul>
   <li style="list-style-type: none; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; margin-left: 15%" *ngFor="let content of contentArray | contentType">
@@ -78,19 +78,19 @@
         <ng-template #defaultImage>
           <img [src]="'https://carfromjapan.com/wp-content/uploads/2018/03/types_of_cars.jpg'" alt="default image" style="width: 70%; border-radius: 100px">
         </ng-template>
-        <p style="font-size:30px">{{ content.description }}</p>
+        <p style="font-size:25px">{{ content.description }}</p>
         <p><strong>Creator:</strong> {{ content.creator }}</p>
-        <p appHoverAffect><strong>Type:</strong> {{ content.type }}</p>
-        <p>
+        <p appHoverAffect="underline" style="font-size: 20px"><strong>Type:</strong> {{ content.type }}</p>
+        <p style="font-size: 20px">
           <strong>Tags:</strong>
-          <span>{{ content.tags }}</span>
+          <span *ngFor="let tag of content.tags" appHoverAffect="bold">&emsp;{{ tag }}</span>
         </p>
       </div>
     </div>
   </li>
 </ul>
 
-<h3 style="font-size: 40px; text-align: center; background-color: antiquewhite; color: darkblue; padding: 10px; border-radius:5px" appHoverAffect>---SUV---</h3>
+<h3 style="font-size: 40px; text-align: center; background-color: antiquewhite; color: darkblue; padding: 10px; border-radius:5px" appHoverAffect="underline">---SUV---</h3>
 <ul>
   <li style="list-style-type: none; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; margin-left: 15%" *ngFor="let content of contentArray | contentType: 'SUV'">
 
@@ -103,19 +103,19 @@
         <ng-template #defaultImage>
           <img [src]="'https://carfromjapan.com/wp-content/uploads/2018/03/types_of_cars.jpg'" alt="default image" style="width: 70%; border-radius: 100px">
         </ng-template>
-        <p style="font-size:10px">{{ content.description }}</p>
+        <p style="font-size:25px">{{ content.description }}</p>
         <p><strong>Creator:</strong> {{ content.creator }}</p>
-        <p appHoverAffect><strong>Type:</strong> {{ content.type }}</p>
-        <p>
+        <p appHoverAffect="underline" style="font-size: 20px"><strong>Type:</strong> {{ content.type }}</p>
+        <p style="font-size: 20px">
           <strong>Tags:</strong>
-          <span>{{ content.tags }}</span>
+          <span *ngFor="let tag of content.tags" appHoverAffect="bold">&emsp;{{ tag }}</span>
         </p>
       </div>
     </div>
   </li>
 </ul>
 
-<h3 style="font-size: 40px; text-align: center; background-color: antiquewhite; color: darkblue; padding: 10px; border-radius:5px" appHoverAffect>---Supercars---</h3>
+<h3 style="font-size: 40px; text-align: center; background-color: antiquewhite; color: darkblue; padding: 10px; border-radius:5px" appHoverAffect="underline">---Supercars---</h3>
 <ul>
   <li style="list-style-type: none; margin-left: 15%" *ngFor="let content of contentArray | contentType:'Supercar'">
 
@@ -128,12 +128,12 @@
         <ng-template #defaultImage>
           <img [src]="'https://carfromjapan.com/wp-content/uploads/2018/03/types_of_cars.jpg'" alt="default image" style="width: 70%; border-radius: 100px">
         </ng-template>
-        <p style="font-size:10px">{{ content.description }}</p>
+        <p style="font-size:25px">{{ content.description }}</p>
         <p><strong>Creator:</strong> {{ content.creator }}</p>
-        <p appHoverAffect><strong>Type:</strong> {{ content.type }}</p>
-        <p>
+        <p appHoverAffect="underline" style="font-size: 20px"><strong>Type:</strong> {{ content.type }}</p>
+        <p style="font-size: 20px">
           <strong>Tags:</strong>
-          <span>{{ content.tags }}</span>
+          <span *ngFor="let tag of content.tags" appHoverAffect="bold">&emsp;{{ tag }}</span>
         </p>
       </div>
     </div>
