@@ -67,4 +67,19 @@ message should be displayed under this search, with red text when the title does
 green text when it does exist.
 
 All done
-Assignment-5 completed
+Assignment-3 completed
+
+
+Assignment-4 started.
+Changed the package.json file with 0.0.4.
+
+In your Content-Card, if the imgURL is not set, display a default image on the card
+instead (use an image relevant to your theme), using either *ngIf or *ngSwitch. In your
+Content-List component, add or edit some elements to your array of Content so you
+have at least 1 item with no imgUrl set, to make sure this new functionality works correctly.
+
+step one done successfully.
+
+Create an attribute directive called Hover-Affect. Apply this attribute directive to your
+type in your Content-Card, and use it to add an underline to the type when a user
+hovers over the type, and remove the underline when they hover away from the type.

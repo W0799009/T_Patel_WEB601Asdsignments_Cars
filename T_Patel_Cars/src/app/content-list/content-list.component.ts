@@ -12,13 +12,14 @@ export class ContentListComponent implements OnInit {
   ngOnInit(): void {
       throw new Error('Method not implemented.');
   }
+    
   contentArray = [
       {
         id: 1,
         title: 'Car',
         description: 'This is Car1',
         creator: 'Creator1',
-        imgURL: 'https://www.hdnicewallpapers.com/Walls/Big/Lamborghini/4K_Photo_of_2019_Lamborghini_Huracan_EVO_Car.jpg',
+        imgURL: 'https://www.thewowstyle.com/wp-content/uploads/2015/04/car-hot.jpg',
         type: 'Supercar',
         tags: ['Tag 1.1', 'Tag 1.2'],
       },
@@ -45,7 +46,7 @@ export class ContentListComponent implements OnInit {
         title: 'Car 4',
         description: 'This is Car4',
         creator: 'Creator2',
-        imgURL: 'https://www.pixelstalk.net/wp-content/uploads/2016/06/Pictures-Download-HD-Car-Wallpapers.jpg',
+       // imgURL: 'https://www.pixelstalk.net/wp-content/uploads/2016/06/Pictures-Download-HD-Car-Wallpapers.jpg',
         tags: ['Tag 1.1', 'Tag 1.2'],
       },
       {
@@ -61,7 +62,7 @@ export class ContentListComponent implements OnInit {
         title: 'Car 6',
         description: 'This is Car6',
         creator: 'Creator3',
-        imgURL: 'https://hdqwalls.com/wallpapers/lamborghini-aventador-s-roadster-2019-4k-ok.jpg',
+        //imgURL: 'https://hdqwalls.com/wallpapers/lamborghini-aventador-s-roadster-2019-4k-ok.jpg',
         type: 'Supercar',
         tags: ['Tag 1.1', 'Tag 1.2'],
       },
