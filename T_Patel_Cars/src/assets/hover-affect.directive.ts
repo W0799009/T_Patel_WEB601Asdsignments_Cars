@@ -1,4 +1,4 @@
-/*import { Directive, ElementRef, HostBinding, HostListener, Input } from '@angular/core';
+import { Directive, ElementRef, HostBinding, HostListener, Input } from '@angular/core';
 
 @Directive({
   selector: '[appHoverAffect]'
@@ -31,5 +31,3 @@ export class HoverAffectDirective {
 
 
 
-
-*/

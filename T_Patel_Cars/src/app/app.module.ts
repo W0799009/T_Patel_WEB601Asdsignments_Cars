@@ -6,14 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ContentListComponent } from './content-list/content-list.component';
 import { ContentTypePipe } from './content-type.pipe';
-import { HoverAffectDirective } from './hover-affect.directive';
+//import { HoverAffectDirective } from './hover-affect.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     ContentListComponent,
     ContentTypePipe,
-    HoverAffectDirective
+  //  HoverAffectDirective
   ],
   imports: [
     BrowserModule,
