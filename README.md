@@ -83,3 +83,15 @@ step one done successfully.
 Create an attribute directive called Hover-Affect. Apply this attribute directive to your
 type in your Content-Card, and use it to add an underline to the type when a user
 hovers over the type, and remove the underline when they hover away from the type.
+
+
+
+
+Assignment-5 started.
+Changed the package.json file with 0.0.5.
+
+Add a component to your application called CreateContent and add this component to
+the top of your ContentList.
+In this new component, add an input field for all the necessary fields to make a piece of
+content, including the ID, followed by a button.
+
