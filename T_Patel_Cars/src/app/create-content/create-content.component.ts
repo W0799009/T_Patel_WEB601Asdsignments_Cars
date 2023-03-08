@@ -11,28 +11,27 @@ export class CreateContentComponent {
 
   @Output() contentAdded = new EventEmitter<Content>();
   newContent: Content = {
-    id: '', title: '', description: '', imgURL: '', type: '', tags: [], creator: '' }
+    id: '', title: '', description: '', imgURL: '' || undefined, type: '' || undefined, tags: [], creator: ''
+  }
   errorMessage: string = '';
 
   id!: string;
   title!: string;
   description!: string;
-  imgURL!: string;
-  type!: string;
+  imgURL: string = '';
+  type: string = '';
   tags!: string[];
   creator!: string;
-    contentArray: any;
-
 
   onSubmit() {
     const promise = new Promise<Content>((resolve, reject) => {
-      // Add the new content to the array of existing content
-      const existingContent = this.contentArray; // Assuming `contentList` is an array of existing content in the parent component
+      // Add the new content to the array of existing content in the parent component
       const newContent = this.newContent;
-      existingContent.push(newContent);
+      this.contentAdded.emit(newContent);
 
       // Resolve the promise with the new content item
       resolve(newContent);
+
     });
     promise.then(
       (content: Content) => {
