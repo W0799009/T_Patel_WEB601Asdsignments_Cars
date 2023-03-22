@@ -20,7 +20,7 @@ import { CreateContentComponent } from './create-content/create-content.componen
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

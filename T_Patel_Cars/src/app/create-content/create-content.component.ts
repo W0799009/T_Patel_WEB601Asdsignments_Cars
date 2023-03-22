@@ -1,4 +1,88 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+/*
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Content } from '../helper-files/content-interface';
+
+@Component({
+  selector: 'app-create-content',
+  templateUrl: './create-content.component.html',
+  styleUrls: ['./create-content.component.scss']
+})
+
+
+export class CreateContentComponent implements OnInit {
+
+  id!: number;
+  title!: string;
+  description!: string;
+  imgURL!: string;
+  type!: string;
+  tags!: string;
+  creator!: string;
+
+  ngOnInit(): void {
+      throw new Error('Method not implemented.');
+  }
+
+  newContent = {
+    id: 0,
+    title: '',
+    description: '',
+    imgURL: '',
+    type: '',
+    tags: '',
+    creator: ''
+  };
+
+  @Output() contentCreated = new EventEmitter<any>();
+
+  onSubmit() {
+    return new Promise((resolve, reject) => {
+      // Validate input fields
+      if (!this.newContent.id
+        || !this.newContent.title
+        || !this.newContent.description
+        || !this.newContent.imgURL
+        || !this.newContent.type
+        || !this.newContent.tags
+        || !this.newContent.creator) {
+        reject('Please fill in all fields.');
+        return;
+      }
+
+      // Send new content item to ContentList
+      this.contentCreated.emit(this.newContent);
+
+      // Clear input fields
+      this.newContent = {
+        id: 0,
+        title: '',
+        description: '',
+        imgURL: '',
+        type: '',
+        tags: '',
+        creator: ''
+      };
+
+      // Log success message
+      console.log(`Successfully added content: ${this.newContent.title}`);
+
+      resolve(this.newContent);
+    }).catch((error) => {
+      console.error(error);
+      throw error;
+    });
+  }
+}
+*/
+
+
+
+
+
+
+
+
+import { Component, Output, EventEmitter } from '@angular/core';
 import { Content } from '../helper-files/content-interface';
 
 @Component({
@@ -7,15 +91,35 @@ import { Content } from '../helper-files/content-interface';
   styleUrls: ['./create-content.component.scss']
 })
 export class CreateContentComponent {
+  newContent: any = {};
+  @Output() onCreation = new EventEmitter<Content>();
+
+  addContent() {
+    this.onCreation.emit(this.newContent);
+    this.newContent = {};
+  }
+
+}
+
+
+
+
+
+
+
+
+
+/*
+export class CreateContentComponent {
  
 
   @Output() contentAdded = new EventEmitter<Content>();
   newContent: Content = {
-    id: '', title: '', description: '', imgURL: '' || undefined, type: '' || undefined, tags: [], creator: ''
+    id: 0, title: '', description: '', imgURL: '' || undefined, type: '' || undefined, tags: [], creator: ''
   }
   errorMessage: string = '';
 
-  id!: string;
+  id!: number;
   title!: string;
   description!: string;
   imgURL: string = '';
@@ -47,12 +151,12 @@ export class CreateContentComponent {
   }
 
   clearFields() {
-    this.newContent = { id: '', title: '', description: '', imgURL: '', type: '', tags: [], creator: ''};
+    this.newContent = { id: 0, title: '', description: '', imgURL: '', type: '', tags: [], creator: ''};
     this.errorMessage = '';
   }
 
 
-/*  function createContentItem(title, description) {
+  function createContentItem(title, description) {
   return new Promise((resolve, reject) => {
     // create a new content item using the title and description
     const newContentItem = { title, description };
@@ -64,6 +168,6 @@ export class CreateContentComponent {
 function handleSuccess(title) {
   console.log(`New content item "${title}" added successfully!`);
   setTitle('');
-  setDescription('');*/
+  setDescription('');
 }
-
+*/

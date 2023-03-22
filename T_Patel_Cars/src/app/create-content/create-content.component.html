@@ -1,4 +1,4 @@
-<form (submit)="onSubmit()" style="text-align:center; background-color:darkcyan; color:aquamarine; border-radius:20px; ">
+<!--<form style="text-align:center; background-color:darkcyan; color:aquamarine; border-radius:20px; ">
 
   <br>
   <br />
@@ -46,7 +46,34 @@
   </label>
   <br>
   <br />
-  <button type="submit">Submit</button>
+  <button (click)="onSubmit()" type="submit">Submit</button>
   <br>
   <br />
+</form>
+-->
+
+
+
+
+
+<form style=" background-color: darkslategray; color: aquamarine;">
+  <br />
+
+  <div>
+
+    <h1 style="color:antiquewhite">Add new content  item</h1>
+    <label>ID: <input type="number" [(ngModel)]="newContent.id" name="id"></label> <br> <br />
+    <label>Title: <input type="text" [(ngModel)]="newContent.title" name="title"></label> <br> <br />
+    <label>Description: <input type="text" [(ngModel)]="newContent.description" name="description"></label> <br> <br />
+    <label>ImgURL: <input type="text" [(ngModel)]="newContent.imgURL" name="imgURL"></label> <br> <br />
+    <label>Type: <input type="text" [(ngModel)]="newContent.type" name="type"></label> <br> <br />
+    <label>Tags: <input type="text" [(ngModel)]="newContent.tags" name="tags"></label> <br> <br />
+    <label>Creator: <input type="text" [(ngModel)]="newContent.creator" name="creator"></label> <br> <br />
+
+    <div>
+      <button (click)="addContent()">Add Content</button>
+    </div>
+
+  </div> <br />
+
 </form>

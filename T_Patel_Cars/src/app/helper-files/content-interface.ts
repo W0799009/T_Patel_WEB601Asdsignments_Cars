@@ -1,5 +1,5 @@
 export interface Content {
-    id: string;
+    id: number;
     title: string;
     description: string;
     imgURL?: string;

@@ -13,9 +13,14 @@ export class ContentListComponent implements OnInit {
     throw new Error('Method not implemented.');
   }
 
-  contentArray = [
+
+  title: string = '';
+  errTxt: boolean = false;
+
+
+  contentArray: Content[] =  [
     {
-      id: '1',
+      id: 1,
       title: 'Car',
       description: 'This is Car1',
       creator: 'Creator1',
@@ -24,7 +29,7 @@ export class ContentListComponent implements OnInit {
       tags: ['Tag 1.1', 'Tag 1.2'],
     },
     {
-      id: '2',
+      id: 2,
       title: 'Car 2',
       description: 'This is Car2',
       creator: 'Creator2',
@@ -33,7 +38,7 @@ export class ContentListComponent implements OnInit {
       tags: ['Tag 1.1', 'Tag 1.2'],
     },
     {
-      id: '3',
+      id: 3,
       title: 'Car 3',
       description: 'This is Car3',
       creator: 'Creator1',
@@ -42,7 +47,7 @@ export class ContentListComponent implements OnInit {
       tags: ['Tag 1.1', 'Tag 1.2'],
     },
     {
-      id: '4',
+      id: 4,
       title: 'Car 4',
       description: 'This is Car4',
       creator: 'Creator2',
@@ -50,7 +55,7 @@ export class ContentListComponent implements OnInit {
       tags: ['Tag 1.1', 'Tag 1.2'],
     },
     {
-      id: '5',
+      id: 5,
       title: 'Car 5',
       description: 'This is Car5',
       creator: 'Creator3',
@@ -58,7 +63,7 @@ export class ContentListComponent implements OnInit {
       tags: ['Tag 1.1', 'Tag 1.2'],
     },
     {
-      id: '6',
+      id: 6,
       title: 'Car 6',
       description: 'This is Car6',
       creator: 'Creator3',
@@ -67,7 +72,7 @@ export class ContentListComponent implements OnInit {
       tags: ['Tag 1.1', 'Tag 1.2'],
     },
     {
-      id: '7',
+      id: 7,
       title: 'Car 7',
       description: 'This is Car7',
       creator: 'Creator2',
@@ -91,7 +96,28 @@ export class ContentListComponent implements OnInit {
     /*this.searchResults = this.contentArray.filter(item => item.title.toLowerCase().includes(this.searchTerm.toLowerCase()));
     this.searchExists = this.searchResults.length > 0;*/
   }
-  onContentAdded(content: Content) {
+
+  /*addContent(content: Content) {
     this.contentArray.push(content);
+  }*/
+
+
+  addContent(newContent: Content) {
+    const AddPromise = new Promise((resolve, reject) => {
+      this.contentArray.push(newContent);
+      console.log(`Content Added successfully, Country: ${this.title}`);
+      this.contentArray = [...this.contentArray];
+      resolve(newContent.title);
+    });
+
+    AddPromise.then(title => {
+      
+      this.errTxt = false;
+    }).catch(err => {
+      this.errTxt = true;
+    });
+
   }
+
+
 }
