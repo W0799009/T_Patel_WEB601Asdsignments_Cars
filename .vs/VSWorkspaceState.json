@@ -5,8 +5,9 @@
     "\\T_Patel_Cars\\src",
     "\\T_Patel_Cars\\src\\app",
     "\\T_Patel_Cars\\src\\app\\content-list",
-    "\\T_Patel_Cars\\src\\app\\helper-files"
+    "\\T_Patel_Cars\\src\\app\\helper-files",
+    "\\T_Patel_Cars\\src\\assets"
   ],
-  "SelectedNode": "\\T_Patel_Cars\\src\\app\\app.module.ts",
+  "SelectedNode": "\\T_Patel_Cars\\src\\app\\content-list\\content-list.component.ts",
   "PreviewInSolutionExplorer": false
 }
