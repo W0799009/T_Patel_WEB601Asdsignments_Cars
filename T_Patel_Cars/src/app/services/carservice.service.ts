@@ -1,3 +1,4 @@
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { Content } from '../helper-files/content-interface';
@@ -9,12 +10,22 @@ import { MessageService } from './message.service';
 })
 export class CarserviceService {
 
-  constructor(private MessageService: MessageService) { }
+  private httpOptions = {
+    headers: new HttpHeaders({ "Content-Type": "application/json" })
+  }
+
+
+  constructor(private http: HttpClient, private MessageService: MessageService) { }
 
   getCars(): Observable<Content[]> {
     const cars = contents;
     this.MessageService.add("Content array loaded!");
     return of(cars);
+  }
+
+  addCar(newCar: Content): Observable<Content> {
+    this.MessageService.add(`New Car added`);
+    return this.http.post<Content>("/api/cars", newCar, this.httpOptions);
   }
 
   getCarById(id: number): Observable<any> {

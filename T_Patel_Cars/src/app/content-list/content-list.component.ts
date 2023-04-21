@@ -22,6 +22,13 @@ export class ContentListComponent {
     this.CarserviceService.getCars().subscribe((cars: Content[]) => this.contents = cars);
   }
 
+  addNewCar(newCar: Content) {
+    this.CarserviceService.addCar(newCar).subscribe(newCarFromServer => {
+      this.contents.push(newCarFromServer);
+      this.contents = [...this.contents];
+    });
+  }
+
 
   searchByTitle() {
     const matchingCar = this.contents.find(car => car.title.toLowerCase() === this.searchTitle.toLowerCase());
