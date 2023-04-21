@@ -1,4 +1,4 @@
-.carById-sec {
+/*.carById-sec {
   padding: 24px 12px;
 
   .idForm {
@@ -27,6 +27,74 @@
 
 .oneCard {
   min-width: 80%;
+  max-width: 1100px;
+  margin: auto;
+  padding: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+*/
+
+.carById-sec {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.idForm {
+  margin-top: 20px;
+}
+
+form {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+input[type="number"] {
+  width: 200px;
+  padding: 5px;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1.2em;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.oneCard {
+  margin-top: 30px;
+}
+
+.oneCar {
+  border: 2px solid #007bff;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px #007bff;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.oneCar .card-img img {
+  width: 20%;
+}
+.oneCard {
   max-width: 1100px;
   margin: auto;
   padding: 15px;

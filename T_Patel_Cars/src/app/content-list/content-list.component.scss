@@ -1,4 +1,4 @@
-main {
+/*main {
   padding: 15px;
 
   & > h1 {
@@ -42,4 +42,70 @@ main {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+}
+*/
+
+.searchForTitle input[type="text"],
+.searchForTitle button {
+  font-size: 1rem;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Style the button inside .searchForTitle */
+.searchForTitle button {
+  margin-left: 1rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Style the paragraph that shows if the title was found or not */
+.searchForTitle p {
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+}
+
+/* Style the h1 elements */
+h1 {
+  font-size: 2rem;
+  margin: 1.5rem 0;
+}
+
+/* Style the .cards section */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+/* Style the .cards divs */
+.cards div {
+  width: calc(33.33% - 1rem);
+  
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+/* Style the .cards divs with the 'Supercar' class */
+.cards div.Supercar {
+  border-color: #f0ad4e;
+  
+}
+
+/* Style the .cards divs with the 'SUV' class */
+.cards div.SUV {
+  border-color: #d9534f;
+  
+}
+
+/* Style the .cards divs when hovering */
+.cards div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
 }
