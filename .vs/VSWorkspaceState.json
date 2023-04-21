@@ -4,10 +4,13 @@
     "\\T_Patel_Cars",
     "\\T_Patel_Cars\\src",
     "\\T_Patel_Cars\\src\\app",
-    "\\T_Patel_Cars\\src\\app\\content-list",
+    "\\T_Patel_Cars\\src\\app\\content-card",
+    "\\T_Patel_Cars\\src\\app\\directives",
     "\\T_Patel_Cars\\src\\app\\helper-files",
-    "\\T_Patel_Cars\\src\\assets"
+    "\\T_Patel_Cars\\src\\app\\message",
+    "\\T_Patel_Cars\\src\\app\\modify-content",
+    "\\T_Patel_Cars\\src\\app\\pipes"
   ],
-  "SelectedNode": "\\T_Patel_Cars\\src\\app\\content-list\\content-list.component.ts",
+  "SelectedNode": "\\T_Patel_Cars\\src\\app\\content-card\\content-card.component.html",
   "PreviewInSolutionExplorer": false
 }
