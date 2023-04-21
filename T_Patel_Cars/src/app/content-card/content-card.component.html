@@ -14,7 +14,7 @@
     <p>{{car.description}}</p>
     <p><strong>Creator:</strong> {{car.creator}}</p>
     <p *ngIf="car.type" appHoverAffect="underline"><strong>Type:</strong> {{car.type}}</p>
-    <p *ngIf="car.tags">
+    <p *ngIf="car.tags"> 
       <strong>Tags:</strong>
       <span *ngFor="let tag of car.tags" appHoverAffect="bold">
         {{tag}},
