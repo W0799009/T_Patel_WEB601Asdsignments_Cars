@@ -22,6 +22,9 @@ import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { AddContentDialogComponent } from './add-content-dialog/add-content-dialog.component';
+import { ContentDetailComponent } from './content-detail/content-detail.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -32,10 +35,13 @@ import { AddContentDialogComponent } from './add-content-dialog/add-content-dial
     HoverAffectDirective,
     MessageComponent,
     ModifyContentComponent,
-    AddContentDialogComponent
+    AddContentDialogComponent,
+    ContentDetailComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
     FormsModule,
     HttpClientModule,
     MatInputModule,
@@ -46,7 +52,6 @@ import { AddContentDialogComponent } from './add-content-dialog/add-content-dial
     MatTooltipModule,
     HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {
       dataEncapsulation: false,
-      delay: 1000
     }),
     BrowserAnimationsModule
   ],

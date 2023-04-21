@@ -10,20 +10,8 @@ import { CarserviceService } from './services/carservice.service';
 })
 export class AppComponent {
   title = 'T_Patel_Cars';
-  carId: number = 8;
-  oneCarById: any = {};
 
   constructor(private CarserviceService: CarserviceService) { }
 
-  ngOnInit() {
-    this.findCarById();
-  }
-
-  findCarById() {
-    this.CarserviceService.getCarById(this.carId).subscribe(result => {
-      if (typeof result === "object") {
-        this.oneCarById = result;
-      }
-    });
-  }
+  ngOnInit() { }
 }

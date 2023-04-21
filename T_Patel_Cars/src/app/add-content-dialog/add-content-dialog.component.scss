@@ -1,33 +1,22 @@
-div {
-  margin: auto;
-  max-width: 1100px;
+.newCarForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
 }
 
-h1 {
-  text-align: center;
-  margin-bottom: 12px;
+mat-label {
+  font-weight: bold;
+  font-size: 1.2rem;
 }
 
-.newBikeForm {
-
-  label {
-    display: block;
-  }
-
-  mat-form-field {
-    width: 100%;
-  }
-
-  input, textarea {
-    width: 100%;
-    padding: 4px 12px;
-  }
-
-  textarea {
-    resize: vertical;
-  }
-
-  div {
-    margin: 16px 0px;
-  }
+mat-form-field {
+  width: 100%;
 }
+
+.addBtn {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+

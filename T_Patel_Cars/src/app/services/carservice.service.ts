@@ -18,9 +18,9 @@ export class CarserviceService {
   constructor(private http: HttpClient, private MessageService: MessageService) { }
 
   getCars(): Observable<Content[]> {
-    const cars = contents;
+    
     this.MessageService.add("Content array loaded!");
-    return of(cars);
+    return this.http.get<Content[]>("/api/cars");
   }
 
   addCar(newCar: Content): Observable<Content> {
